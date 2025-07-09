@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hotelcasi/static/css/main.3262ce30.css",
+    "main.js": "/hotelcasi/static/js/main.b8eb64bd.js",
+    "index.html": "/hotelcasi/index.html",
+    "main.3262ce30.css.map": "/hotelcasi/static/css/main.3262ce30.css.map",
+    "main.b8eb64bd.js.map": "/hotelcasi/static/js/main.b8eb64bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3262ce30.css",
+    "static/js/main.b8eb64bd.js"
+  ]
+}
