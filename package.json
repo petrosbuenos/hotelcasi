@@ -1,7 +1,7 @@
 {
   "name": "clearstay-reviews-clone",
   "version": "1.0.0",
-  "homepage": "https://petrosbuenos.github.io/hotelcasi/",
+      "homepage": "https://petrosbuenos.github.io/hotelcasi",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build --dotfiles"
   },
   "eslintConfig": {
     "extends": [

@@ -115,24 +115,10 @@ Strona jest w pełni responsywna i zoptymalizowana dla:
 
 ### GitHub Pages
 
-Для розгортання на GitHub Pages:
-
-1. **Оновіть homepage** в `package.json` (замініть `yourusername` на ваше ім'я):
-   ```json
-   "homepage": "https://yourusername.github.io/hotelcasino"
-   ```
-
-2. **Встановіть залежності:**
-   ```bash
-   npm install
-   ```
-
-3. **Деплой:**
-   ```bash
-   npm run deploy
-   ```
-
-4. **Налаштуйте GitHub Pages** в налаштуваннях репозиторію (Pages → Source → gh-pages branch)
+1. **Автоматичний деплой** - Push змін в main branch
+2. **GitHub Actions** автоматично збудує та розгорне сайт
+3. **Сайт буде доступний** за адресою: https://petrosbuenos.github.io/hotelcasi/
+4. **Головна сторінка** автоматично перенаправить на React додаток
 
 ### Локальний запуск
 
@@ -146,7 +132,11 @@ npm start
 npm run build
 ```
 
-Це створить оптимізовану версію додатку в папці `build/`.
+### Важливі примітки
+
+- `index.html` в корені проекту служить як лендінг-сторінка і перенаправляє на React додаток
+- React додаток знаходиться в папці `build/` після деплою
+- GitHub Pages обслуговує сайт з кореня репозиторію
 
 ### Детальні інструкції
 
