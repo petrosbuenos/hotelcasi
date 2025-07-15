@@ -1,5 +1,8 @@
 import React from 'react';
 import './About.css';
+import AnnaKowalska from '../img/team/AnnaKowalska.jpeg';
+import MichalNowak from '../img/team/MichałNowak.jpeg';
+import ElenaWisniewska from '../img/team/ElenaWiśniewska.jpg';
 
 const About = () => {
   const teamMembers = [
@@ -8,21 +11,21 @@ const About = () => {
       name: "Anna Kowalska",
       position: "Redaktor naczelny",
       description: "Ekspert turystyczny z 10-letnim doświadczeniem",
-      avatar: "👩‍💼"
+      avatar: AnnaKowalska
     },
     {
       id: 2,
       name: "Michał Nowak",
       position: "Dyrektor techniczny",
       description: "Specjalista od rozwoju web i UX/UI",
-      avatar: "👨‍💻"
+      avatar: MichalNowak
     },
     {
       id: 3,
       name: "Elena Wiśniewska",
       position: "Menedżer treści",
       description: "Doświadczony podróżnik i bloger",
-      avatar: "👩‍🎨"
+      avatar: ElenaWisniewska
     }
   ];
 
@@ -114,7 +117,9 @@ const About = () => {
           <div className="team-grid">
             {teamMembers.map(member => (
               <div key={member.id} className="team-card">
-                <div className="member-avatar">{member.avatar}</div>
+                <div className="member-avatar">
+                  <img src={member.avatar} alt={member.name} />
+                </div>
                 <h3>{member.name}</h3>
                 <p className="member-position">{member.position}</p>
                 <p className="member-description">{member.description}</p>
