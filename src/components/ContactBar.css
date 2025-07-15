@@ -1,0 +1,40 @@
+.contact-bar {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-icon {
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.contact-item span {
+  font-weight: 400;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .contact-bar {
+    padding: 0.75rem 0;
+  }
+} 

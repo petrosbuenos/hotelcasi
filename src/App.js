@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import ContactBar from './components/ContactBar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AgeVerification from './components/AgeVerification';
@@ -31,6 +32,7 @@ function App() {
       <div className="App">
         <ScrollToTop />
         <AgeVerification />
+        <ContactBar />
         <Header />
         <main>
           <Routes>
