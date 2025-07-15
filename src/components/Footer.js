@@ -34,8 +34,9 @@ const Footer = () => {
           
           <div className="footer-section">
             <h4>Kontakt</h4>
-            <p>Email: info@stayversoreviews.com</p>
-            <p>Telefon: +1 (555) 123-4567</p>
+            <p>Email: kontakt@stayversoreviews.com</p>
+            <p>Telefon: +48 691 769 487</p>
+            <p>Adres: ul. Schulza Brunona 88, Warszawa</p>
           </div>
           
           <div className="footer-section">

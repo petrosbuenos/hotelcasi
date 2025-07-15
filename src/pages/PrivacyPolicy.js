@@ -29,6 +29,10 @@ const PrivacyPolicy = () => {
             <p>
               Kontakt z administratorem możliwy jest drogą mailową: <a href="mailto:kontakt@stayversoreviews.com">kontakt@stayversoreviews.com</a>
             </p>
+            <p>
+              Telefon: <a href="tel:+48691769487">+48 691 769 487</a><br />
+              Adres: ul. Schulza Brunona 88, Warszawa
+            </p>
           </section>
 
           <section>

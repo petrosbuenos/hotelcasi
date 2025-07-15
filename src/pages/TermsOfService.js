@@ -153,7 +153,9 @@ const TermsOfService = () => {
             <p><strong>9.1.</strong> Reklamacje dotyczące działania serwisu można zgłaszać:</p>
             <ul>
               <li>Drogą elektroniczną: kontakt@stayversoreviews.com</li>
+              <li>Telefonicznie: +48 691 769 487</li>
               <li>Przez formularz kontaktowy dostępny na stronie</li>
+              <li>Pocztą tradycyjną: ul. Schulza Brunona 88, Warszawa</li>
             </ul>
             <p>
               <strong>9.2.</strong> Administrator rozpatruje reklamacje w terminie 14 dni od ich otrzymania.
@@ -190,6 +192,8 @@ const TermsOfService = () => {
             </p>
             <div className="contact-info">
               <p>📧 E-mail: <a href="mailto:kontakt@stayversoreviews.com">kontakt@stayversoreviews.com</a></p>
+              <p>📞 Telefon: <a href="tel:+48691769487">+48 691 769 487</a></p>
+              <p>📍 Adres: ul. Schulza Brunona 88, Warszawa</p>
               <p>📄 Formularz kontaktowy: <a href="/kontakt">/kontakt</a></p>
             </div>
             <p className="last-update">

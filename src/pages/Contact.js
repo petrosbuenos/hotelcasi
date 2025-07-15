@@ -36,19 +36,19 @@ const Contact = () => {
     {
       icon: "📧",
       title: "Email",
-      details: "info@clearstayreviews.com",
+      details: "kontakt@stayversoreviews.com",
       description: "Napisz do nas email"
     },
     {
       icon: "📞",
       title: "Telefon",
-      details: "+1 (555) 123-4567",
+      details: "+48 691 769 487",
       description: "Dzwoń do nas od 9:00 do 18:00"
     },
     {
       icon: "📍",
       title: "Adres",
-      details: "Warszawa, Polska",
+      details: "ul. Schulza Brunona 88, Warszawa",
       description: "Nasze biuro znajduje się w centrum miasta"
     }
   ];

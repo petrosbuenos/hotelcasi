@@ -204,6 +204,8 @@ const CookiePolicy = () => {
             <h2>Kontakt</h2>
             <div className="contact-info">
               <p>📧 E-mail: <a href="mailto:kontakt@stayversoreviews.com">kontakt@stayversoreviews.com</a></p>
+              <p>📞 Telefon: <a href="tel:+48691769487">+48 691 769 487</a></p>
+              <p>📍 Adres: ul. Schulza Brunona 88, Warszawa</p>
               <p>📄 Formularz kontaktowy: <a href="/kontakt">/kontakt</a></p>
             </div>
             <p className="last-update">
