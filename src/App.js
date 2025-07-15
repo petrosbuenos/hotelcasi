@@ -9,6 +9,7 @@ import Reviews from './pages/Reviews';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import HotelDetails from './pages/HotelDetails';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import './App.css';
 
 // Компонент для автоматичного прокручування вгору при зміні маршруту
@@ -36,6 +37,7 @@ function App() {
             <Route path="/reviews/:id" element={<HotelDetails />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />} />
           </Routes>
         </main>
         <Footer />

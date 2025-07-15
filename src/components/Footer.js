@@ -37,6 +37,15 @@ const Footer = () => {
             <p>Email: info@stayversoreviews.com</p>
             <p>Telefon: +1 (555) 123-4567</p>
           </div>
+          
+          <div className="footer-section">
+            <h4>Prawne</h4>
+            <ul>
+              <li><Link to="/polityka-prywatnosci">Polityka prywatności</Link></li>
+              <li><a href="/regulamin">Regulamin</a></li>
+              <li><a href="/cookies">Polityka cookies</a></li>
+            </ul>
+          </div>
         </div>
         
         <div className="social-media-section">
