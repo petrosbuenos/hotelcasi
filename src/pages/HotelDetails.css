@@ -205,6 +205,79 @@
   font-size: 1.2rem;
 }
 
+.location-section {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.location-section h2 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.location-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.location-info h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.location-info p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.transport-info {
+  margin-bottom: 20px;
+}
+
+.transport-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.transport-item:last-child {
+  border-bottom: none;
+}
+
+.transport-icon {
+  font-size: 1.3rem;
+  min-width: 30px;
+}
+
+.parking-info {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  font-style: italic;
+}
+
+.map-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  border-radius: 10px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hotel-hero {
@@ -239,6 +312,11 @@
   
   .nearby-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .location-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
 }
 

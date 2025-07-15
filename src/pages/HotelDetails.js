@@ -18,6 +18,10 @@ const HotelDetails = () => {
       price: "350 zł",
       image: "/HotelMieszko.jpg",
       website: "https://hotel-mieszko.pl",
+      coordinates: {
+        lat: 52.7328,
+        lng: 15.2386
+      },
       category: "3-gwiazdkowy hotel biznesowy",
       checkIn: "14:00",
       checkOut: "12:00",
@@ -57,6 +61,10 @@ const HotelDetails = () => {
       price: "450 zł",
       image: "/IndigoWarsaw.jpg",
       website: "https://indigowarsaw.com/kontakt/",
+      coordinates: {
+        lat: 52.2297,
+        lng: 21.0122
+      },
       category: "4-gwiazdkowy hotel boutique",
       checkIn: "15:00",
       checkOut: "11:00",
@@ -96,6 +104,10 @@ const HotelDetails = () => {
       price: "380 zł",
       image: "/CityParkHotel.jpg",
       website: "https://cityparkhotel.pl/pl/",
+      coordinates: {
+        lat: 52.4064,
+        lng: 16.9252
+      },
       category: "4-gwiazdkowy hotel miejski",
       checkIn: "14:00",
       checkOut: "12:00",
@@ -135,6 +147,10 @@ const HotelDetails = () => {
       price: "280 zł",
       image: "/HotelHutnik.jpg",
       website: "https://hutnik.pl",
+      coordinates: {
+        lat: 50.5824,
+        lng: 22.0534
+      },
       category: "3-gwiazdkowy hotel przemysłowy",
       checkIn: "14:00",
       checkOut: "11:00",
@@ -250,6 +266,56 @@ const HotelDetails = () => {
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Location Section */}
+        <div className="location-section">
+          <h2>Lokalizacja i dostępność</h2>
+          <div className="location-content">
+            <div className="location-info">
+              <p>
+                {hotel.name} znajduje się w {hotel.location.split(',')[1]?.trim() || 'centrum miasta'}. 
+                Dzięki tej lokalizacji jesteś w zasięgu spaceru od najważniejszych punktów miasta.
+              </p>
+              
+              <h3>Jak dojechać?</h3>
+              <div className="transport-info">
+                <div className="transport-item">
+                  <span className="transport-icon">🚆</span>
+                  <span><strong>Dworzec PKP:</strong> 10-15 minut pieszo</span>
+                </div>
+                <div className="transport-item">
+                  <span className="transport-icon">✈️</span>
+                  <span><strong>Lotnisko:</strong> 20-30 minut samochodem</span>
+                </div>
+                <div className="transport-item">
+                  <span className="transport-icon">🚇</span>
+                  <span><strong>Komunikacja miejska:</strong> przystanki w pobliżu</span>
+                </div>
+                <div className="transport-item">
+                  <span className="transport-icon">🚌</span>
+                  <span><strong>Autobusy & tramwaje:</strong> kilka linii w promieniu 200 metrów</span>
+                </div>
+              </div>
+              
+              <p className="parking-info">
+                Parking dostępny dla gości hotelowych (dodatkowa opłata). 
+                Możliwość wynajmu samochodu lub roweru miejskiego w pobliżu.
+              </p>
+            </div>
+            
+            <div className="map-container">
+              <iframe
+                title={`Mapa lokalizacji ${hotel.name}`}
+                width="100%"
+                height="400"
+                frameBorder="0"
+                style={{ border: 0 }}
+                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${hotel.coordinates.lat},${hotel.coordinates.lng}&zoom=15`}
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
 
