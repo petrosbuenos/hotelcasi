@@ -94,7 +94,7 @@ const Home = () => {
               Czytaj szczere recenzje od rzeczywistych gości i planuj niezapomnianą podróż.
             </p>
             <div className="hero-buttons">
-              <Link to="/reviews" className="btn">Przeglądaj recenzje</Link>
+              <Link to="/reviews" className="btn">Przeglądaj hotele</Link>
               <Link to="/about" className="btn btn-secondary">Dowiedz się więcej</Link>
             </div>
           </div>

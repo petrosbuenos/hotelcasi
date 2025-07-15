@@ -1,11 +1,13 @@
-.contact-bar {
-  background-color: #000;
+.top-bar {
+  background: rgba(0,0,0,0.85);
   color: #fff;
-  padding: 0.5rem 0;
-  font-size: 0.9rem;
+  padding: 0.25rem 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
 }
 
-.contact-info {
+.top-bar-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,26 +17,35 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: #fff;
 }
 
-.contact-icon {
-  font-style: normal;
-  font-size: 1rem;
-}
-
-.contact-item span {
+.contact-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.875rem;
   font-weight: 400;
+  transition: opacity 0.2s;
 }
 
-/* Адаптивність для мобільних пристроїв */
+.contact-item a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  opacity: 0.9;
+}
+
 @media (max-width: 768px) {
-  .contact-info {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
+  .top-bar {
+    padding: 0.5rem 0;
   }
-  
-  .contact-bar {
-    padding: 0.75rem 0;
+  .top-bar-content {
+    justify-content: center;
+    gap: 1.5rem;
   }
 } 

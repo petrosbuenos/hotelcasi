@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Reviews.css';
 
 const Reviews = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedRating, setSelectedRating] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-
-  const categories = [
-    { id: 'all', name: 'Wszystkie kategorie' },
-    { id: 'luxury', name: 'Luksusowe hotele' },
-    { id: 'budget', name: 'Opcje budżetowe' },
-    { id: 'resorts', name: 'Kurorty' },
-    { id: 'apartments', name: 'Apartamenty' },
-    { id: 'boutique', name: 'Hotele butikowe' }
-  ];
 
   const ratings = [
     { id: 'all', name: 'Wszystkie oceny' },
@@ -25,93 +16,68 @@ const Reviews = () => {
   const hotels = [
     {
       id: 1,
-      name: "Grand Hotel Europe",
-      location: "Paryż, Francja",
-      category: "luxury",
-      rating: 4.8,
-      price: "€200",
-      image: "🏨",
-      description: "Luksusowy hotel w sercu Paryża z widokiem na Wieżę Eiffla.",
-      amenities: ["Wi-Fi", "Spa", "Restauracja", "Basen", "Centrum fitness"],
-      reviews: 127
-    },
-    {
-      id: 2,
-      name: "Ocean View Resort",
-      location: "Barcelona, Hiszpania",
-      category: "resorts",
-      rating: 4.6,
-      price: "€180",
-      image: "🌊",
-      description: "Kurort nad morzem z własną plażą i restauracjami.",
-      amenities: ["Plaża", "Restauracja", "Basen", "Wi-Fi", "Parking"],
-      reviews: 89
-    },
-    {
-      id: 3,
-      name: "Mountain Lodge",
-      location: "Szwajcarskie Alpy",
-      category: "boutique",
-      rating: 4.9,
-      price: "€300",
-      image: "🏔️",
-      description: "Unikalny hotel butikowy w górach z panoramiczny widokiem.",
-      amenities: ["Widok na góry", "Restauracja", "Spa", "Wi-Fi", "Transfer"],
+      name: "Hotel Mieszko",
+      location: "ul. Kosynierów Gdyńskich 82, 66-400 Gorzów Wielkopolski",
+      rating: 4.7,
+      price: "350 zł",
+      image: "/HotelMieszko.jpg",
+      website: "https://hotel-mieszko.pl",
+      description: "Wygodny hotel w centrum Gorzowa Wielkopolskiego z doskonałą lokalizacją i wysokim standardem obsługi.",
+      amenities: ["Wi-Fi", "Restauracja", "Parking", "Sala konferencyjna", "Centrum fitness"],
       reviews: 156
     },
     {
-      id: 4,
-      name: "City Center Hotel",
-      location: "Berlin, Niemcy",
-      category: "budget",
-      rating: 4.2,
-      price: "€80",
-      image: "🏢",
-      description: "Wygodny hotel budżetowy w centrum miasta.",
-      amenities: ["Wi-Fi", "Restauracja", "Parking", "Sala konferencyjna"],
-      reviews: 203
-    },
-    {
-      id: 5,
-      name: "Seaside Apartments",
-      location: "Ateny, Grecja",
-      category: "apartments",
-      rating: 4.5,
-      price: "€120",
-      image: "🏠",
-      description: "Nowoczesne apartamenty z widokiem na morze i kuchnią.",
-      amenities: ["Kuchnia", "Wi-Fi", "Balkon", "Parking", "Pralnia"],
-      reviews: 67
-    },
-    {
-      id: 6,
-      name: "Royal Palace Hotel",
-      location: "Londyn, Wielka Brytania",
-      category: "luxury",
-      rating: 4.7,
-      price: "€350",
-      image: "👑",
-      description: "Historyczny luksusowy hotel w centrum Londynu.",
-      amenities: ["Spa", "Restauracja", "Basen", "Centrum fitness", "Concierge"],
+      id: 2,
+      name: "Indigo Warsaw",
+      location: "ul. Smolna 40, 00-375 Warszawa",
+      rating: 4.8,
+      price: "450 zł",
+      image: "/IndigoWarsaw.jpg",
+      website: "https://indigowarsaw.com/kontakt/",
+      description: "Nowoczesny hotel butikowy w sercu Warszawy z unikalnym designem i doskonałym serwisem.",
+      amenities: ["Wi-Fi", "Restauracja", "Bar", "Spa", "Centrum fitness"],
       reviews: 234
+    },
+    {
+      id: 3,
+      name: "City Park Hotel",
+      location: "ul. Wyspiańskiego 26a, 60-751 Poznań",
+      rating: 4.6,
+      price: "380 zł",
+      image: "/CityParkHotel.jpg",
+      website: "https://cityparkhotel.pl/pl/",
+      description: "Elegancki hotel w centrum Poznania z widokiem na park i bliskością głównych atrakcji miasta.",
+      amenities: ["Wi-Fi", "Restauracja", "Basen", "Spa", "Parking"],
+      reviews: 189
+    },
+    {
+      id: 4,
+      name: "Hotel Hutnik",
+      location: "ul. Ks. Prymasa Wyszyńskiego 12, 37-450 Stalowa Wola",
+      rating: 4.5,
+      price: "280 zł",
+      image: "/HotelHutnik.jpg",
+      website: "https://hutnik.pl",
+      description: "Przyjazny hotel w Stalowej Woli z tradycyjną polską gościnnością i nowoczesnymi udogodnieniami.",
+      amenities: ["Wi-Fi", "Restauracja", "Parking", "Sala konferencyjna", "Bar"],
+      reviews: 98
     }
   ];
 
   const filteredHotels = hotels.filter(hotel => {
-    const matchesCategory = selectedCategory === 'all' || hotel.category === selectedCategory;
     const matchesRating = selectedRating === 'all' || hotel.rating >= parseInt(selectedRating);
     const matchesSearch = hotel.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          hotel.location.toLowerCase().includes(searchTerm.toLowerCase());
     
-    return matchesCategory && matchesRating && matchesSearch;
+    return matchesRating && matchesSearch;
   });
 
   return (
     <div className="reviews-page">
       <div className="container">
         <div className="page-header">
-          <h1>Recenzje hoteli</h1>
-          <p>Znajdź idealny hotel za pomocą naszych szczegółowych recenzji</p>
+          <h1>Hotele w Polsce</h1>
+          <p>Znajdź idealny hotel w Polsce za pomocą naszych szczegółowych recenzji</p>
         </div>
 
         {/* Filters */}
@@ -126,20 +92,6 @@ const Reviews = () => {
           </div>
 
           <div className="filters">
-            <div className="filter-group">
-              <label>Kategoria:</label>
-              <select 
-                value={selectedCategory} 
-                onChange={(e) => setSelectedCategory(e.target.value)}
-              >
-                {categories.map(category => (
-                  <option key={category.id} value={category.id}>
-                    {category.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-
             <div className="filter-group">
               <label>Ocena:</label>
               <select 
@@ -165,7 +117,9 @@ const Reviews = () => {
         <div className="hotels-grid">
           {filteredHotels.map(hotel => (
             <div key={hotel.id} className="hotel-card">
-              <div className="hotel-image">{hotel.image}</div>
+              <div className="hotel-image">
+                <img src={hotel.image} alt={hotel.name} />
+              </div>
               <div className="hotel-content">
                 <div className="hotel-header">
                   <h3>{hotel.name}</h3>
@@ -188,10 +142,13 @@ const Reviews = () => {
                   )}
                 </div>
                 
-                                  <div className="hotel-footer">
-                    <div className="hotel-price">od {hotel.price}/noc</div>
-                    <button className="btn">Szczegóły</button>
+                <div className="hotel-footer">
+                  <div className="hotel-price">od {hotel.price}/noc</div>
+                  <div className="hotel-buttons">
+                    <Link to={`/reviews/${hotel.id}`} className="btn">Szczegóły</Link>
+                    <a href={hotel.website} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Strona hotelu</a>
                   </div>
+                </div>
               </div>
             </div>
           ))}
