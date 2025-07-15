@@ -1,5 +1,5 @@
-import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AgeVerification from './components/AgeVerification';
@@ -11,10 +11,22 @@ import Contact from './pages/Contact';
 import HotelDetails from './pages/HotelDetails';
 import './App.css';
 
+// Компонент для автоматичного прокручування вгору при зміні маршруту
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <AgeVerification />
         <Header />
         <main>

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './HotelDetails.css';
 
 const HotelDetails = () => {
   const { id } = useParams();
+
+  useEffect(() => {
+    // Прокручуємо сторінку вгору при завантаженні
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const hotelsData = {
     1: {
