@@ -76,7 +76,7 @@ const Home = () => {
         <div className="container">
           <h1>Znajdź idealny hotel na swój wypoczynek</h1>
           <p>
-            Clear Stay Reviews - Twój niezawodny pomocnik w wyborze najlepszych hoteli i kurortów. 
+            StayVerso Reviews - Twój niezawodny pomocnik w wyborze najlepszych hoteli i kurortów. 
             Czytaj szczere recenzje od rzeczywistych gości i planuj niezapomnianą podróż.
           </p>
           <div className="hero-buttons">

@@ -38,7 +38,7 @@ const About = () => {
       <div className="container">
         {/* Hero Section */}
         <section className="about-hero">
-          <h1>O Clear Stay Reviews</h1>
+          <h1>O StayVerso Reviews</h1>
           <p>
             Jesteśmy zespołem entuzjastów, którzy kochają podróże i chcą pomóc 
             innym znaleźć najlepsze miejsca na wypoczynek.
@@ -109,7 +109,7 @@ const About = () => {
         <section className="team-section">
           <h2>Nasz zespół</h2>
           <p className="team-intro">
-            Poznaj ekspertów, którzy tworzą treści dla Clear Stay Reviews
+            Poznaj ekspertów, którzy tworzą treści dla StayVerso Reviews
           </p>
           <div className="team-grid">
             {teamMembers.map(member => (
@@ -129,7 +129,7 @@ const About = () => {
             <div className="story-text">
               <h2>Nasza historia</h2>
               <p>
-                Clear Stay Reviews zostało założone w 2020 roku przez grupę przyjaciół, którzy 
+                StayVerso Reviews zostało założone w 2020 roku przez grupę przyjaciół, którzy 
                 napotkali problem ze znalezieniem wiarygodnych informacji o hotelach 
                 podczas planowania swoich podróży.
               </p>

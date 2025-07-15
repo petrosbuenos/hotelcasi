@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Clear Stay Reviews</h3>
+            <h3>StayVerso Reviews</h3>
             <p>Twoje niezawodne źródło szczerych recenzji hoteli i kurortów na całym świecie.</p>
           </div>
           
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2024 Clear Stay Reviews. Wszelkie prawa zastrzeżone.</p>
+          <p>&copy; 2024 StayVerso Reviews. Wszelkie prawa zastrzeżone.</p>
         </div>
       </div>
     </footer>
