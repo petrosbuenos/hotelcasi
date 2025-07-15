@@ -1,7 +1,7 @@
 {
   "name": "clearstay-reviews-clone",
   "version": "1.0.0",
-  "homepage": "https://petrosbuenos.github.io/hotelcasi",
+  "homepage": "https://stayversoreviews.com",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
