@@ -45,27 +45,39 @@ const Home = () => {
   const popularHotels = [
     {
       id: 1,
-      name: "Grand Hotel Europe",
-      location: "Paryż, Francja",
-      rating: 4.8,
-      price: "€200",
-      image: "🏨"
+      name: "Hotel Mieszko",
+      location: "ul. Kosynierów Gdyńskich 82, 66-400 Gorzów Wielkopolski",
+      rating: 4.7,
+      price: "350 zł",
+      image: "🏨",
+      website: "https://hotel-mieszko.pl"
     },
     {
       id: 2,
-      name: "Ocean View Resort",
-      location: "Barcelona, Hiszpania",
-      rating: 4.6,
-      price: "€180",
-      image: "🌊"
+      name: "Indigo Warsaw",
+      location: "ul. Smolna 40, 00-375 Warszawa",
+      rating: 4.8,
+      price: "450 zł",
+      image: "🏢",
+      website: "https://indigowarsaw.com/kontakt/"
     },
     {
       id: 3,
-      name: "Mountain Lodge",
-      location: "Szwajcarskie Alpy",
-      rating: 4.9,
-      price: "€300",
-      image: "🏔️"
+      name: "City Park Hotel",
+      location: "ul. Wyspiańskiego 26a, 60-751 Poznań",
+      rating: 4.6,
+      price: "380 zł",
+      image: "🌳",
+      website: "https://cityparkhotel.pl/pl/"
+    },
+    {
+      id: 4,
+      name: "Hotel Hutnik",
+      location: "ul. Ks. Prymasa Wyszyńskiego 12, 37-450 Stalowa Wola",
+      rating: 4.5,
+      price: "280 zł",
+      image: "🏭",
+      website: "https://hutnik.pl"
     }
   ];
 
@@ -126,7 +138,10 @@ const Home = () => {
                     <span className="rating-text">{hotel.rating}/5</span>
                   </div>
                   <p className="hotel-price">od {hotel.price}/noc</p>
-                  <Link to={`/reviews/${hotel.id}`} className="btn">Szczegóły</Link>
+                  <div className="hotel-buttons">
+                    <Link to={`/reviews/${hotel.id}`} className="btn">Szczegóły</Link>
+                    <a href={hotel.website} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Strona hotelu</a>
+                  </div>
                 </div>
               </div>
             ))}

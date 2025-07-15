@@ -77,6 +77,20 @@
   margin-bottom: 15px;
 }
 
+.hotel-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hotel-buttons .btn {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
 .text-center {
   text-align: center;
 }
