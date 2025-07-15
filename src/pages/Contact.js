@@ -192,29 +192,7 @@ const Contact = () => {
             </div>
           </section>
 
-          {/* Social Media */}
-          <section className="social-section">
-            <h2>Śledź nas</h2>
-            <p>Bądź na bieżąco z najnowszymi wiadomościami i aktualizacjami</p>
-            <div className="social-links">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                <span className="social-icon">📘</span>
-                <span>Facebook</span>
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                <span className="social-icon">🐦</span>
-                <span>Twitter</span>
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                <span className="social-icon">📷</span>
-                <span>Instagram</span>
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                <span className="social-icon">💼</span>
-                <span>LinkedIn</span>
-              </a>
-            </div>
-          </section>
+
         </div>
       </div>
     </div>
