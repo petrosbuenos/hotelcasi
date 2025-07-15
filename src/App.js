@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import HotelDetails from './pages/HotelDetails';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import CookiePolicy from './pages/CookiePolicy';
+import TermsOfService from './pages/TermsOfService';
 import './App.css';
 
 // Компонент для автоматичного прокручування вгору при зміні маршруту
@@ -40,6 +41,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />} />
             <Route path="/cookies" element={<CookiePolicy />} />
+            <Route path="/regulamin" element={<TermsOfService />} />
           </Routes>
         </main>
         <Footer />

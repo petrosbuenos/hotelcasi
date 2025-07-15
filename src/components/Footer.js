@@ -42,7 +42,7 @@ const Footer = () => {
             <h4>Prawne</h4>
             <ul>
               <li><Link to="/polityka-prywatnosci">Polityka prywatności</Link></li>
-              <li><a href="/regulamin">Regulamin</a></li>
+              <li><Link to="/regulamin">Regulamin</Link></li>
               <li><Link to="/cookies">Polityka cookies</Link></li>
             </ul>
           </div>
