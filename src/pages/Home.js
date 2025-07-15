@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import mainImage from '../img/main.jpeg';
 import './Home.css';
 
 const Home = () => {
@@ -84,16 +85,18 @@ const Home = () => {
   return (
     <div className="home">
       {/* Hero Section */}
-      <section className="hero-section">
-        <div className="container">
-          <h1>Znajdź idealny hotel na swój wypoczynek</h1>
-          <p>
-            StayVerso Reviews - Twój niezawodny pomocnik w wyborze najlepszych hoteli i kurortów. 
-            Czytaj szczere recenzje od rzeczywistych gości i planuj niezapomnianą podróż.
-          </p>
-          <div className="hero-buttons">
-            <Link to="/reviews" className="btn">Przeglądaj recenzje</Link>
-            <Link to="/about" className="btn btn-secondary">Dowiedz się więcej</Link>
+      <section className="hero-section" style={{ backgroundImage: `url(${mainImage})` }}>
+        <div className="hero-overlay">
+          <div className="container">
+            <h1>Znajdź idealny hotel na swój wypoczynek</h1>
+            <p>
+              StayVerso Reviews - Twój niezawodny pomocnik w wyborze najlepszych hoteli i kurortów. 
+              Czytaj szczere recenzje od rzeczywistych gości i planuj niezapomnianą podróż.
+            </p>
+            <div className="hero-buttons">
+              <Link to="/reviews" className="btn">Przeglądaj recenzje</Link>
+              <Link to="/about" className="btn btn-secondary">Dowiedz się więcej</Link>
+            </div>
           </div>
         </div>
       </section>
