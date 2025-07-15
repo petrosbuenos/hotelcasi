@@ -49,7 +49,7 @@ const Home = () => {
       location: "ul. Kosynierów Gdyńskich 82, 66-400 Gorzów Wielkopolski",
       rating: 4.7,
       price: "350 zł",
-      image: "🏨",
+      image: "/HotelMieszko.jpg",
       website: "https://hotel-mieszko.pl"
     },
     {
@@ -58,7 +58,7 @@ const Home = () => {
       location: "ul. Smolna 40, 00-375 Warszawa",
       rating: 4.8,
       price: "450 zł",
-      image: "🏢",
+      image: "/IndigoWarsaw.jpg",
       website: "https://indigowarsaw.com/kontakt/"
     },
     {
@@ -67,7 +67,7 @@ const Home = () => {
       location: "ul. Wyspiańskiego 26a, 60-751 Poznań",
       rating: 4.6,
       price: "380 zł",
-      image: "🌳",
+      image: "/CityParkHotel.jpg",
       website: "https://cityparkhotel.pl/pl/"
     },
     {
@@ -76,7 +76,7 @@ const Home = () => {
       location: "ul. Ks. Prymasa Wyszyńskiego 12, 37-450 Stalowa Wola",
       rating: 4.5,
       price: "280 zł",
-      image: "🏭",
+      image: "/HotelHutnik.jpg",
       website: "https://hutnik.pl"
     }
   ];
@@ -129,7 +129,9 @@ const Home = () => {
           <div className="hotels-grid">
             {popularHotels.map(hotel => (
               <div key={hotel.id} className="hotel-card">
-                <div className="hotel-image">{hotel.image}</div>
+                <div className="hotel-image">
+                  <img src={hotel.image} alt={hotel.name} />
+                </div>
                 <div className="hotel-info">
                   <h3>{hotel.name}</h3>
                   <p className="hotel-location">{hotel.location}</p>
