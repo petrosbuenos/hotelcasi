@@ -1,0 +1,155 @@
+.cookie-consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  color: white;
+  padding: 20px;
+  z-index: 9998;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cookie-consent-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cookie-consent-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.cookie-icon {
+  font-size: 24px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.cookie-text-content {
+  flex: 1;
+}
+
+.cookie-text-content p {
+  margin: 0 0 10px 0;
+  line-height: 1.5;
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.cookie-learn-more {
+  background: none;
+  border: none;
+  color: #4CAF50;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.cookie-learn-more:hover {
+  color: #66bb6a;
+}
+
+.cookie-consent-buttons {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.cookie-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 100px;
+}
+
+.cookie-btn-decline {
+  background: transparent;
+  color: #e0e0e0;
+  border: 1px solid #666;
+}
+
+.cookie-btn-decline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #888;
+}
+
+.cookie-btn-accept {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+}
+
+.cookie-btn-accept:hover {
+  background: linear-gradient(135deg, #45a049, #3d8b40);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .cookie-consent-banner {
+    padding: 15px;
+  }
+  
+  .cookie-consent-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+  
+  .cookie-consent-text {
+    min-width: auto;
+  }
+  
+  .cookie-consent-buttons {
+    justify-content: center;
+  }
+  
+  .cookie-btn {
+    flex: 1;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cookie-consent-banner {
+    padding: 12px;
+  }
+  
+  .cookie-text-content p {
+    font-size: 13px;
+  }
+  
+  .cookie-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+} 
