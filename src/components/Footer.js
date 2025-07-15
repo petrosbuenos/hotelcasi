@@ -34,13 +34,31 @@ const Footer = () => {
           
           <div className="footer-section">
             <h4>Kontakt</h4>
-            <p>Email: info@clearstayreviews.com</p>
+            <p>Email: info@stayversoreviews.com</p>
             <p>Telefon: +1 (555) 123-4567</p>
-            <div className="social-links">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">🐦</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📷</a>
-            </div>
+          </div>
+        </div>
+        
+        <div className="social-media-section">
+          <h3>Śledź nas</h3>
+          <p>Bądź na bieżąco z najnowszymi wiadomościami i aktualizacjami</p>
+          <div className="social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon facebook">
+              <span className="icon">📘</span>
+              <span className="label">Facebook</span>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon twitter">
+              <span className="icon">🐦</span>
+              <span className="label">Twitter</span>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon instagram">
+              <span className="icon">📷</span>
+              <span className="label">Instagram</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
+              <span className="icon">💼</span>
+              <span className="label">LinkedIn</span>
+            </a>
           </div>
         </div>
         
