@@ -30,20 +30,20 @@ const AgeVerification = () => {
     <div className="age-verification-overlay">
       <div className="age-verification-modal">
         <div className="age-verification-icon">🛡️</div>
-        <h2 className="age-verification-title">Age Verification Required</h2>
+        <h2 className="age-verification-title">Wymagana weryfikacja wieku</h2>
         <p className="age-verification-text">
-          You must be 18 or older to access this casino hotel website.
+          Musisz mieć 18 lat lub więcej, aby uzyskać dostęp do tej strony hotelu kasyna.
         </p>
-        <p className="age-verification-question">Are you 18 or older?</p>
+        <p className="age-verification-question">Czy masz 18 lat lub więcej?</p>
         
         <div className="age-verification-buttons">
           <button className="age-verification-btn age-verification-btn-yes" onClick={handleYes}>
             <span className="btn-icon">✓</span>
-            YES, I AM OVER 18
+            TAK, MAM POWYŻEJ 18 LAT
           </button>
           <button className="age-verification-btn age-verification-btn-no" onClick={handleNo}>
             <span className="btn-icon">✗</span>
-            NO
+            NIE
           </button>
         </div>
       </div>

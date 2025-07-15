@@ -38,20 +38,20 @@ const CookieConsent = () => {
           <span className="cookie-icon">🍪</span>
           <div className="cookie-text-content">
             <p>
-              Ми використовуємо cookies для покращення вашого досвіду на нашому сайті. 
-              Продовжуючи використовувати сайт, ви погоджуєтесь з нашим використанням cookies.
+              Używamy plików cookie, aby poprawić Twoje wrażenia na naszej stronie. 
+              Kontynuując korzystanie ze strony, zgadzasz się na nasze używanie plików cookie.
             </p>
             <button className="cookie-learn-more" onClick={handleLearnMore}>
-              Дізнатися більше
+              Dowiedz się więcej
             </button>
           </div>
         </div>
         <div className="cookie-consent-buttons">
           <button className="cookie-btn cookie-btn-decline" onClick={handleDecline}>
-            Відхилити
+            Odrzuć
           </button>
           <button className="cookie-btn cookie-btn-accept" onClick={handleAccept}>
-            Прийняти
+            Akceptuj
           </button>
         </div>
       </div>
