@@ -102,6 +102,12 @@ const Home = () => {
     { id: 8, name: "Aurora Solutions", logo: auroraSolutionsLogo, website: "#" }
   ];
 
+  // Split partners into groups of 4
+  const partnerGroups = [];
+  for (let i = 0; i < partners.length; i += 4) {
+    partnerGroups.push(partners.slice(i, i + 4));
+  }
+
   return (
     <div className="home">
       {/* Hero Section */}
@@ -183,15 +189,19 @@ const Home = () => {
         <div className="container">
           <h2 className="section-title">Nasi partnerzy</h2>
           <p className="section-subtitle">
-            Współpracujemy z wiodącymi firmami w branży turystycznej i technologicznej
+            Zaufali nam liderzy różnych branż
           </p>
           
           <div className="partners-grid">
-            {partners.map(partner => (
-              <div key={partner.id} className="partner-card">
-                <a href={partner.website} target="_blank" rel="noopener noreferrer">
-                  <img src={partner.logo} alt={partner.name} />
-                </a>
+            {partnerGroups.map((group, index) => (
+              <div key={index} className="partner-group">
+                {group.map(partner => (
+                  <div key={partner.id} className="partner-card">
+                    <a href={partner.website} target="_blank" rel="noopener noreferrer">
+                      <img src={partner.logo} alt={partner.name} />
+                    </a>
+                  </div>
+                ))}
               </div>
             ))}
           </div>
