@@ -1,6 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import mainImage from '../img/main.jpeg';
+// Import partner logos
+import luxstyleLogo from '../img/partners/luxstyle.png';
+import euroTravelLogo from '../img/partners/euro-travel.png';
+import globalFinanceLogo from '../img/partners/global-finance.png';
+import alphaTechLogo from '../img/partners/alpha-tech.png';
+import skyloopLogo from '../img/partners/skyloop.png';
+import vivacommerceLogo from '../img/partners/vivacommerce.png';
+import northdataLogo from '../img/partners/northdata.png';
+import auroraSolutionsLogo from '../img/partners/aurora-solutions.png';
 import './Home.css';
 
 const Home = () => {
@@ -82,6 +91,17 @@ const Home = () => {
     }
   ];
 
+  const partners = [
+    { id: 1, name: "LuxStyle", logo: luxstyleLogo, website: "#" },
+    { id: 2, name: "Euro Travel", logo: euroTravelLogo, website: "#" },
+    { id: 3, name: "Global Finance", logo: globalFinanceLogo, website: "#" },
+    { id: 4, name: "Alpha Tech", logo: alphaTechLogo, website: "#" },
+    { id: 5, name: "SkyLoop", logo: skyloopLogo, website: "#" },
+    { id: 6, name: "VivaCommerce", logo: vivacommerceLogo, website: "#" },
+    { id: 7, name: "NorthData", logo: northdataLogo, website: "#" },
+    { id: 8, name: "Aurora Solutions", logo: auroraSolutionsLogo, website: "#" }
+  ];
+
   return (
     <div className="home">
       {/* Hero Section */}
@@ -154,6 +174,26 @@ const Home = () => {
           
           <div className="text-center">
             <Link to="/reviews" className="btn btn-secondary">Przeglądaj wszystkie hotele</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="partners-section">
+        <div className="container">
+          <h2 className="section-title">Nasi partnerzy</h2>
+          <p className="section-subtitle">
+            Współpracujemy z wiodącymi firmami w branży turystycznej i technologicznej
+          </p>
+          
+          <div className="partners-grid">
+            {partners.map(partner => (
+              <div key={partner.id} className="partner-card">
+                <a href={partner.website} target="_blank" rel="noopener noreferrer">
+                  <img src={partner.logo} alt={partner.name} />
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
