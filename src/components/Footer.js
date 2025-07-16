@@ -30,45 +30,50 @@ const Footer = () => {
         </div>
         
         <div className="footer-content">
-          <div className="footer-section">
-            <h3>StayVerso Reviews</h3>
-            <p>Twoje niezawodne źródło szczerych recenzji hoteli i kurortów na całym świecie.</p>
-          </div>
-          
-          <div className="footer-section">
-            <h4>Szybkie linki</h4>
-            <ul>
-              <li><Link to="/">Strona główna</Link></li>
-              <li><Link to="/reviews">Recenzje</Link></li>
-              <li><Link to="/about">O nas</Link></li>
-              <li><Link to="/contact">Kontakt</Link></li>
-            </ul>
-          </div>
-          
-          <div className="footer-section">
-            <h4>Kategorie</h4>
-            <ul>
-              <li><a href="#luxury">Luksusowe hotele</a></li>
-              <li><a href="#budget">Opcje budżetowe</a></li>
-              <li><a href="#resorts">Kurorty</a></li>
-              <li><a href="#apartments">Apartamenty</a></li>
-            </ul>
-          </div>
-          
-          <div className="footer-section">
-            <h4>Kontakt</h4>
-            <p>Email: kontakt@stayversoreviews.com</p>
-            <p>Telefon: +48 691 769 487</p>
-            <p>Adres: ul. Schulza Brunona 88, Warszawa</p>
-          </div>
-          
-          <div className="footer-section">
-            <h4>Prawne</h4>
-            <ul>
-              <li><Link to="/polityka-prywatnosci">Polityka prywatności</Link></li>
-              <li><Link to="/regulamin">Regulamin</Link></li>
-              <li><Link to="/cookies">Polityka cookies</Link></li>
-            </ul>
+          <div className="footer-main-section">
+            <div className="footer-brand">
+              <h3>StayVerso Reviews</h3>
+              <p>Twoje niezawodne źródło szczerych recenzji hoteli i kurortów na całym świecie. Odkryj najlepsze hotele z kasynami i zaplanuj niezapomnianą podróż.</p>
+            </div>
+            
+            <div className="footer-links-section">
+              <div className="footer-links-group">
+                <h4>Szybkie linki</h4>
+                <ul>
+                  <li><Link to="/">Strona główna</Link></li>
+                  <li><Link to="/reviews">Recenzje</Link></li>
+                  <li><Link to="/about">O nas</Link></li>
+                  <li><Link to="/contact">Kontakt</Link></li>
+                </ul>
+              </div>
+              
+              <div className="footer-links-group">
+                <h4>Prawne</h4>
+                <ul>
+                  <li><Link to="/polityka-prywatnosci">Polityka prywatności</Link></li>
+                  <li><Link to="/regulamin">Regulamin</Link></li>
+                  <li><Link to="/cookies">Polityka cookies</Link></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="footer-contact">
+              <h4>Kontakt</h4>
+              <div className="contact-info">
+                <div className="contact-item">
+                  <span className="contact-icon">📧</span>
+                  <span>kontakt@stayversoreviews.com</span>
+                </div>
+                <div className="contact-item">
+                  <span className="contact-icon">📞</span>
+                  <span>+48 691 769 487</span>
+                </div>
+                <div className="contact-item">
+                  <span className="contact-icon">📍</span>
+                  <span>ul. Schulza Brunona 88, Warszawa</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         
