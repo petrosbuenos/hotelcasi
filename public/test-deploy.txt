@@ -1,3 +1,0 @@
-Test deploy - $(date)
-This file was created to test if deployment is working.
-Current time: $(date) 
