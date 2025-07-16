@@ -1,13 +1,21 @@
 .hero-section {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
   padding: 200px 0;
   color: white;
   text-align: center;
   min-height: 100vh;
   width: 100%;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .hero-overlay {
@@ -20,6 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .hero-section .container {

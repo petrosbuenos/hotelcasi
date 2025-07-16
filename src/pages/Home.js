@@ -111,13 +111,13 @@ const Home = () => {
   return (
     <div className="home">
       {/* Hero Section */}
-      <section className="hero-section" style={{ backgroundImage: `url(${mainImage})` }}>
+      <section className="hero-section">
+        <img src={mainImage} alt="Hotel Casino Background" className="hero-background" />
         <div className="hero-overlay">
           <div className="container">
-            <h1>Znajdź idealny hotel na swój wypoczynek</h1>
+            <h1>Witamy w Stay Verso Reviews</h1>
             <p>
-              StayVerso Reviews - Twój niezawodny pomocnik w wyborze najlepszych hoteli i kurortów. 
-              Czytaj szczere recenzje od rzeczywistych gości i planuj niezapomnianą podróż.
+              Twoim zaufanym przewodniku po najlepszych hotelach z kasynami. Przeczytaj szczere opinie prawdziwych gości i zaplanuj niezapomnianą podróż.
             </p>
             <div className="hero-buttons">
               <Link to="/reviews" className="btn">Przeglądaj hotele</Link>
