@@ -6,6 +6,29 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
+        <div className="social-media-section">
+          <h3>Śledź nas</h3>
+          <p>Bądź na bieżąco z najnowszymi wiadomościami i aktualizacjami</p>
+          <div className="social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon facebook">
+              <span className="icon">📘</span>
+              <span className="label">Facebook</span>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon twitter">
+              <span className="icon">🐦</span>
+              <span className="label">Twitter</span>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon instagram">
+              <span className="icon">📷</span>
+              <span className="label">Instagram</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
+              <span className="icon">💼</span>
+              <span className="label">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+        
         <div className="footer-content">
           <div className="footer-section">
             <h3>StayVerso Reviews</h3>
@@ -46,29 +69,6 @@ const Footer = () => {
               <li><Link to="/regulamin">Regulamin</Link></li>
               <li><Link to="/cookies">Polityka cookies</Link></li>
             </ul>
-          </div>
-        </div>
-        
-        <div className="social-media-section">
-          <h3>Śledź nas</h3>
-          <p>Bądź na bieżąco z najnowszymi wiadomościami i aktualizacjami</p>
-          <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon facebook">
-              <span className="icon">📘</span>
-              <span className="label">Facebook</span>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon twitter">
-              <span className="icon">🐦</span>
-              <span className="label">Twitter</span>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon instagram">
-              <span className="icon">📷</span>
-              <span className="label">Instagram</span>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
-              <span className="icon">💼</span>
-              <span className="label">LinkedIn</span>
-            </a>
           </div>
         </div>
         
