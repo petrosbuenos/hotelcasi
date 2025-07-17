@@ -285,7 +285,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100px;
+  height: 120px;
   width: 200px;
   border: 1px solid #495057;
 }
@@ -382,7 +382,7 @@
   
   .partner-card {
     padding: 20px;
-    min-height: 80px;
+    height: 100px;
     width: 150px;
   }
   
@@ -439,7 +439,7 @@
   
   .partner-card {
     padding: 15px;
-    min-height: 70px;
+    height: 80px;
     width: 120px;
   }
   
