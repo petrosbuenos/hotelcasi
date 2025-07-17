@@ -79,15 +79,6 @@ const Home = () => {
       price: "380 zł",
       image: "/CityParkHotel.jpg",
       website: "https://cityparkhotel.pl/pl/"
-    },
-    {
-      id: 4,
-      name: "Hotel Hutnik",
-      location: "ul. Ks. Prymasa Wyszyńskiego 12, 37-450 Stalowa Wola",
-      rating: 4.5,
-      price: "280 zł",
-      image: "/HotelHutnik.jpg",
-      website: "https://hutnik.pl"
     }
   ];
 

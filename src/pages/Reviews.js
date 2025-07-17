@@ -49,18 +49,6 @@ const Reviews = () => {
       description: "Elegancki hotel w centrum Poznania z widokiem na park i bliskością głównych atrakcji miasta.",
       amenities: ["Wi-Fi", "Restauracja", "Basen", "Spa", "Parking"],
       reviews: 189
-    },
-    {
-      id: 4,
-      name: "Hotel Hutnik",
-      location: "ul. Ks. Prymasa Wyszyńskiego 12, 37-450 Stalowa Wola",
-      rating: 4.5,
-      price: "280 zł",
-      image: "/HotelHutnik.jpg",
-      website: "https://hutnik.pl",
-      description: "Przyjazny hotel w Stalowej Woli z tradycyjną polską gościnnością i nowoczesnymi udogodnieniami.",
-      amenities: ["Wi-Fi", "Restauracja", "Parking", "Sala konferencyjna", "Bar"],
-      reviews: 98
     }
   ];
 

@@ -140,48 +140,7 @@ const HotelDetails = () => {
         "Dworzec PKP - 15 min pieszo"
       ]
     },
-    4: {
-      name: "Hotel Hutnik",
-      location: "ul. Ks. Prymasa Wyszyńskiego 12, 37-450 Stalowa Wola",
-      rating: 4.5,
-      price: "280 zł",
-      image: "/HotelHutnik.jpg",
-      website: "https://hutnik.pl",
-      coordinates: {
-        lat: 50.5824,
-        lng: 22.0534
-      },
-      category: "3-gwiazdkowy hotel przemysłowy",
-      checkIn: "14:00",
-      checkOut: "11:00",
-      description: "Hotel Hutnik to przytulny obiekt w Stalowej Woli, oferujący komfortowe zakwaterowanie w przystępnej cenie. Idealny dla podróżujących służbowo i turystów.",
-      features: [
-        "Bezpłatne Wi-Fi",
-        "Parking",
-        "Restauracja",
-        "Bar",
-        "Sala konferencyjna"
-      ],
-      rooms: [
-        {
-          type: "Pokój Standard",
-          size: "18 m²",
-          bed: "Łóżko pojedyncze lub podwójne",
-          price: "280 zł"
-        },
-        {
-          type: "Pokój Premium",
-          size: "22 m²",
-          bed: "Łóżko podwójne",
-          price: "350 zł"
-        }
-      ],
-      nearby: [
-        "Centrum miasta - 5 min pieszo",
-        "Dworzec PKP - 10 min pieszo",
-        "Park miejski - 3 min pieszo"
-      ]
-    }
+
   };
 
   const hotel = hotelsData[id];
@@ -331,17 +290,6 @@ const HotelDetails = () => {
               ) : id === "3" ? (
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.398778258702!2d16.89093747672031!3d52.40036264508031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444d166bc1731%3A0xf8085cff7220ab6f!2sCity%20Park%20Hotel%20%26%20Residence%20Pozna%C5%84!5e1!3m2!1suk!2sua!4v1752755322674!5m2!1suk!2sua" 
-                  width="100%" 
-                  height="400" 
-                  style={{border:0}} 
-                  allowFullScreen="" 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title={`Mapa lokalizacji ${hotel.name}`}
-                />
-              ) : id === "4" ? (
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.5570197254874!2d22.067995776625096!3d50.566360579011054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473d2cc758c98051%3A0xd2cb3fcbe74607fd!2sHutnik.%20Hotel!5e1!3m2!1suk!2sua!4v1752755412191!5m2!1suk!2sua" 
                   width="100%" 
                   height="400" 
                   style={{border:0}} 
