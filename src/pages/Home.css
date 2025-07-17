@@ -240,8 +240,11 @@
 
 .partners-grid {
   position: relative;
-  height: 150px;
+  min-height: 150px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .partner-group {
@@ -254,19 +257,24 @@
   left: 0;
   width: 100%;
   height: 100%;
-  animation: slidePartners 8s ease-in-out infinite;
+  animation: slidePartners 12s ease-in-out infinite;
+  opacity: 0;
+}
+
+.partner-group:nth-child(1) {
+  animation-delay: 0s;
 }
 
 .partner-group:nth-child(2) {
-  animation-delay: 4s;
+  animation-delay: 6s;
 }
 
 @keyframes slidePartners {
-  0%, 45% {
+  0%, 40% {
     transform: translateX(0);
     opacity: 1;
   }
-  50%, 95% {
+  45%, 95% {
     transform: translateX(-100%);
     opacity: 0;
   }
@@ -281,13 +289,14 @@
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 120px;
   width: 200px;
   border: 1px solid #495057;
+  flex-shrink: 0;
 }
 
 .partner-card:hover {
@@ -373,11 +382,12 @@
   }
   
   .partners-grid {
-    height: 120px;
+    min-height: 120px;
   }
   
   .partner-group {
     gap: 20px;
+    flex-wrap: wrap;
   }
   
   .partner-card {
@@ -400,6 +410,17 @@
 }
 
 @media (max-width: 480px) {
+  /* Disable animation on very small screens for better performance */
+  .partner-group {
+    animation: none;
+    opacity: 1;
+    position: relative;
+  }
+  
+  .partner-group:nth-child(2) {
+    display: none;
+  }
+  
   .hero-section {
     padding: 120px 0;
     min-height: 70vh;
@@ -430,11 +451,12 @@
   }
   
   .partners-grid {
-    height: 100px;
+    min-height: 100px;
   }
   
   .partner-group {
     gap: 15px;
+    flex-wrap: wrap;
   }
   
   .partner-card {
