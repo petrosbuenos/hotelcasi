@@ -306,15 +306,61 @@ const HotelDetails = () => {
             </div>
             
             <div className="map-container">
-              <iframe
-                title={`Mapa lokalizacji ${hotel.name}`}
-                width="100%"
-                height="400"
-                frameBorder="0"
-                style={{ border: 0 }}
-                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${hotel.coordinates.lat},${hotel.coordinates.lng}&zoom=15`}
-                allowFullScreen
-              />
+              {id === "1" ? (
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210.25055596302423!2d15.230413243212894!3d52.73577117451645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47071f9eec38f6ab%3A0xb68b028b289bab5c!2sHotel%20Mieszko!5e1!3m2!1suk!2sua!4v1752754541414!5m2!1suk!2sua" 
+                  width="100%" 
+                  height="400" 
+                  style={{border:0}} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`Mapa lokalizacji ${hotel.name}`}
+                />
+              ) : id === "2" ? (
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d426.8599651652805!2d21.020931511120132!3d52.232624397162176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccf6f11be3f5%3A0x22000dec6e6bbf2b!2sHotel%20Indigo%20Warsaw%20-%20Nowy%20Swiat%20by%20IHG!5e1!3m2!1suk!2sua!4v1752755246729!5m2!1suk!2sua" 
+                  width="100%" 
+                  height="400" 
+                  style={{border:0}} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`Mapa lokalizacji ${hotel.name}`}
+                />
+              ) : id === "3" ? (
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.398778258702!2d16.89093747672031!3d52.40036264508031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444d166bc1731%3A0xf8085cff7220ab6f!2sCity%20Park%20Hotel%20%26%20Residence%20Pozna%C5%84!5e1!3m2!1suk!2sua!4v1752755322674!5m2!1suk!2sua" 
+                  width="100%" 
+                  height="400" 
+                  style={{border:0}} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`Mapa lokalizacji ${hotel.name}`}
+                />
+              ) : id === "4" ? (
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.5570197254874!2d22.067995776625096!3d50.566360579011054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473d2cc758c98051%3A0xd2cb3fcbe74607fd!2sHutnik.%20Hotel!5e1!3m2!1suk!2sua!4v1752755412191!5m2!1suk!2sua" 
+                  width="100%" 
+                  height="400" 
+                  style={{border:0}} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`Mapa lokalizacji ${hotel.name}`}
+                />
+              ) : (
+                <iframe
+                  title={`Mapa lokalizacji ${hotel.name}`}
+                  width="100%"
+                  height="400"
+                  frameBorder="0"
+                  style={{ border: 0 }}
+                  src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${hotel.coordinates.lat},${hotel.coordinates.lng}&zoom=15`}
+                  allowFullScreen
+                />
+              )}
             </div>
           </div>
         </div>
