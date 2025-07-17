@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.21c53c7b.css",
-    "main.js": "/static/js/main.c67442ca.js",
+    "main.js": "/static/js/main.85336a06.js",
     "static/media/ElenaWiśniewska.jpg": "/static/media/ElenaWiśniewska.6eaf9d5cd9bf71b3d491.jpg",
     "static/media/main.jpeg": "/static/media/main.b89a33d8ea17e416f40f.jpeg",
     "index.html": "/index.html",
     "main.21c53c7b.css.map": "/static/css/main.21c53c7b.css.map",
-    "main.c67442ca.js.map": "/static/js/main.c67442ca.js.map"
+    "main.85336a06.js.map": "/static/js/main.85336a06.js.map"
   },
   "entrypoints": [
     "static/css/main.21c53c7b.css",
-    "static/js/main.c67442ca.js"
+    "static/js/main.85336a06.js"
   ]
 }
