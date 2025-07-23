@@ -33,7 +33,7 @@ const Reviews = () => {
       rating: 4.8,
       price: "450 zł",
       image: "/IndigoWarsaw.jpg",
-      website: "https://indigowarsaw.com/kontakt/",
+      website: "https://indigowarsaw.com/",
       description: "Nowoczesny hotel butikowy w sercu Warszawy z unikalnym designem i doskonałym serwisem.",
       amenities: ["Wi-Fi", "Restauracja", "Bar", "Spa", "Centrum fitness"],
       reviews: 234

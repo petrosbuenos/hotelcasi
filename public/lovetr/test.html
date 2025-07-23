@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovetr Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #0f1419;
+            color: white;
+        }
+        .test-panel {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+        .test-button {
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+        .test-button:hover {
+            background: linear-gradient(45deg, #2563eb, #1e40af);
+        }
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .success {
+            background: rgba(0, 255, 0, 0.2);
+            color: #4ade80;
+        }
+        .error {
+            background: rgba(255, 0, 0, 0.2);
+            color: #f87171;
+        }
+        .info {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+        }
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-panel">
+        <h1>🧪 Lovetr Section Test</h1>
+        
+        <div class="test-section">
+            <h3>📁 File Structure Test</h3>
+            <div id="fileTest" class="status info">Checking files...</div>
+            <button class="test-button" onclick="testFiles()">Test Files</button>
+        </div>
+        
+        <div class="test-section">
+            <h3>🎨 CSS Test</h3>
+            <div id="cssTest" class="status info">Checking CSS...</div>
+            <button class="test-button" onclick="testCSS()">Test CSS</button>
+        </div>
+        
+        <div class="test-section">
+            <h3>⚡ JavaScript Test</h3>
+            <div id="jsTest" class="status info">Checking JavaScript...</div>
+            <button class="test-button" onclick="testJavaScript()">Test JavaScript</button>
+        </div>
+        
+        <div class="test-section">
+            <h3>📱 Responsive Test</h3>
+            <div id="responsiveTest" class="status info">Checking responsive design...</div>
+            <div class="test-grid">
+                <button class="test-button" onclick="testMobile()">Mobile View</button>
+                <button class="test-button" onclick="testTablet()">Tablet View</button>
+                <button class="test-button" onclick="testDesktop()">Desktop View</button>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>🔗 Navigation Test</h3>
+            <div id="navTest" class="status info">Checking navigation...</div>
+            <div class="test-grid">
+                <button class="test-button" onclick="goToMain()">Go to Main Page</button>
+                <button class="test-button" onclick="goToLovetr()">Go to Lovetr</button>
+                <button class="test-button" onclick="testLinks()">Test All Links</button>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>📊 Performance Test</h3>
+            <div id="perfTest" class="status info">Checking performance...</div>
+            <button class="test-button" onclick="testPerformance()">Test Performance</button>
+        </div>
+    </div>
+
+    <script>
+        // File Structure Test
+        function testFiles() {
+            const files = ['index.html', 'styles.css', 'script.js'];
+            const results = [];
+            
+            files.forEach(file => {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = file;
+                
+                if (file === 'styles.css') {
+                    document.head.appendChild(link);
+                    results.push(`✅ ${file} - Loaded`);
+                } else if (file === 'script.js') {
+                    const script = document.createElement('script');
+                    script.src = file;
+                    script.onload = () => results.push(`✅ ${file} - Loaded`);
+                    script.onerror = () => results.push(`❌ ${file} - Failed`);
+                    document.head.appendChild(script);
+                } else {
+                    results.push(`✅ ${file} - Exists`);
+                }
+            });
+            
+            setTimeout(() => {
+                document.getElementById('fileTest').innerHTML = results.join('<br>');
+                document.getElementById('fileTest').className = 'status success';
+            }, 1000);
+        }
+        
+        // CSS Test
+        function testCSS() {
+            const testElement = document.createElement('div');
+            testElement.style.cssText = `
+                background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+                padding: 10px;
+                border-radius: 5px;
+                margin: 10px 0;
+            `;
+            testElement.textContent = 'CSS Gradient Test';
+            
+            document.getElementById('cssTest').appendChild(testElement);
+            document.getElementById('cssTest').className = 'status success';
+        }
+        
+        // JavaScript Test
+        function testJavaScript() {
+            const tests = [
+                { name: 'DOM Manipulation', test: () => document.createElement('div') },
+                { name: 'Event Handling', test: () => typeof addEventListener === 'function' },
+                { name: 'JSON Support', test: () => typeof JSON === 'object' },
+                { name: 'Local Storage', test: () => typeof localStorage === 'object' },
+                { name: 'Fetch API', test: () => typeof fetch === 'function' }
+            ];
+            
+            const results = tests.map(test => {
+                try {
+                    test.test();
+                    return `✅ ${test.name}`;
+                } catch (e) {
+                    return `❌ ${test.name} - ${e.message}`;
+                }
+            });
+            
+            document.getElementById('jsTest').innerHTML = results.join('<br>');
+            document.getElementById('jsTest').className = 'status success';
+        }
+        
+        // Responsive Test
+        function testMobile() {
+            document.body.style.width = '375px';
+            document.getElementById('responsiveTest').innerHTML = '📱 Mobile view (375px) - Check layout';
+            document.getElementById('responsiveTest').className = 'status info';
+        }
+        
+        function testTablet() {
+            document.body.style.width = '768px';
+            document.getElementById('responsiveTest').innerHTML = '📱 Tablet view (768px) - Check layout';
+            document.getElementById('responsiveTest').className = 'status info';
+        }
+        
+        function testDesktop() {
+            document.body.style.width = '1200px';
+            document.getElementById('responsiveTest').innerHTML = '🖥️ Desktop view (1200px) - Check layout';
+            document.getElementById('responsiveTest').className = 'status info';
+        }
+        
+        // Navigation Test
+        function goToMain() {
+            window.location.href = '/';
+        }
+        
+        function goToLovetr() {
+            window.location.href = '/lovetr/index.html';
+        }
+        
+        function testLinks() {
+            const links = [
+                { url: '/', name: 'Main Page' },
+                { url: '/lovetr/index.html', name: 'Lovetr Page' }
+            ];
+            
+            const results = links.map(link => {
+                return `<a href="${link.url}" target="_blank" style="color: #60a5fa;">🔗 ${link.name}</a>`;
+            });
+            
+            document.getElementById('navTest').innerHTML = results.join(' | ');
+            document.getElementById('navTest').className = 'status success';
+        }
+        
+        // Performance Test
+        function testPerformance() {
+            const start = performance.now();
+            
+            // Simulate some work
+            for (let i = 0; i < 1000000; i++) {
+                Math.random();
+            }
+            
+            const end = performance.now();
+            const duration = end - start;
+            
+            const status = duration < 100 ? 'success' : 'error';
+            const message = duration < 100 ? '✅ Fast' : '❌ Slow';
+            
+            document.getElementById('perfTest').innerHTML = `${message} - ${duration.toFixed(2)}ms`;
+            document.getElementById('perfTest').className = `status ${status}`;
+        }
+        
+        // Auto-run basic tests
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                testFiles();
+                testJavaScript();
+            }, 500);
+        });
+    </script>
+</body>
+</html> 

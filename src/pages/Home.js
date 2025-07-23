@@ -69,7 +69,7 @@ const Home = () => {
       rating: 4.8,
       price: "450 zł",
       image: "/IndigoWarsaw.jpg",
-      website: "https://indigowarsaw.com/kontakt/"
+      website: "https://indigowarsaw.com/"
     },
     {
       id: 3,
