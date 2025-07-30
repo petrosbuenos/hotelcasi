@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3c804cf6.css",
+    "main.js": "/static/js/main.e574008a.js",
+    "static/media/ElenaWiśniewska.jpg": "/static/media/ElenaWiśniewska.6eaf9d5cd9bf71b3d491.jpg",
+    "static/media/main.jpeg": "/static/media/main.b89a33d8ea17e416f40f.jpeg",
+    "static/media/gambleaware.org.png": "/static/media/gambleaware.org.24b3b76a706e78e9f882.png",
+    "static/media/18.png": "/static/media/18.fc5bde1f8ec1d07a41de.png",
+    "static/media/findahelpline-logo.svg": "/static/media/findahelpline-logo.e316e46671a8a96d62e5567731e98eaa.svg",
+    "index.html": "/index.html",
+    "main.3c804cf6.css.map": "/static/css/main.3c804cf6.css.map",
+    "main.e574008a.js.map": "/static/js/main.e574008a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c804cf6.css",
+    "static/js/main.e574008a.js"
+  ]
+}
