@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import AgeVerification from './components/AgeVerification';
 import CookieConsent from './components/CookieConsent';
+import AgeBanner from './components/AgeBanner';
 import Home from './pages/Home';
 import Reviews from './pages/Reviews';
 import About from './pages/About';
@@ -31,6 +32,7 @@ function App() {
     <Router>
       <div className="App">
         <ScrollToTop />
+        <AgeBanner />
         <AgeVerification />
         <ContactBar />
         <Header />
